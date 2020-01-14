@@ -1,0 +1,51 @@
+{
+  "urn": "urn:uuid:58546c90-36c0-11ea-91cc-57eabef0256e",
+  "version": "0.0.1",
+  "name": "SMIS and DHIS2 KPI data sync",
+  "description": "DHIS2 and SMIS KPI Sync",
+  "defaultChannelConfig": [
+    {
+      "name": "SMIS and DHIS2 KPI data sync",
+      "urlPattern": "channelPath",
+      "alerts": [],
+      "txRerunAcl": [],
+      "txViewFullAcl": [],
+      "txViewAcl": [],
+      "properties": [],
+      "matchContentTypes": [],
+      "routes": [
+        {
+          "name": "SMIS and DHIS2 KPI data sync Route",
+          "host": "localhost",
+          "port": "7000",
+          "primary": true,
+          "type": "http"
+        }
+      ],
+      "allow": ["admin"],
+      "type": "http"
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "SMIS and DHIS2 KPI data sync Route",
+      "host": "localhost",
+      "path": "/",
+      "port": "7000",
+      "primary": true,
+      "type": "http"
+    }
+  ],
+  "configDefs": [
+    {
+      "param": "upstreamUrl",
+      "displayName": "Upstream URL",
+      "description": "The URL of the service upstream of the mediator",
+      "type": "string",
+      "template": []
+    }
+  ],
+  "config": {
+    "upstreamUrl": "http://sampleApplication:7001"
+  }
+}
