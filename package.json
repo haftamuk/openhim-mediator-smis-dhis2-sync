@@ -25,15 +25,15 @@
     "openhim-mediator-utils": "^0.2.2",
     "request": "^2.71.0",
     "urijs": "^1.17.1",
-    "xmldom": "^0.1.22",
-    "xpath": "0.0.23"
+    "xmldom": "^0.2.1",
+    "xpath": "0.0.27"
   },
   "devDependencies": {
-    "onchange": "^2.3.0",
-    "winston": "^2.2.0",
-    "rewire": "^2.5.1",
-    "snazzy": "^3.0.1",
-    "standard": "^6.0.8",
-    "tap": "^5.7.1"
+    "onchange": "^6.1.0",
+    "rewire": "^4.0.1",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1",
+    "tap": "^14.10.6",
+    "winston": "^3.2.1"
   }
 }
