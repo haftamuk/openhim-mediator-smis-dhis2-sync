@@ -3,10 +3,22 @@
   "version": "0.0.1",
   "name": "SMIS and DHIS2 KPI data sync",
   "description": "DHIS2 and SMIS KPI Sync",
+  "config": {
+    "dhis2": {
+      "password": "district",
+      "username": "admin",
+      "url": "https://play.dhis2.org/"
+    },
+    "smis": {
+      "password": "",
+      "username": "",
+      "url": "http://127.0.0.1:8000/"
+    }
+  },
   "defaultChannelConfig": [
     {
       "name": "SMIS and DHIS2 KPI data sync",
-      "urlPattern": "channelPath",
+      "urlPattern": "/SMIS-DHIS2/KPI",
       "alerts": [],
       "txRerunAcl": [],
       "txViewFullAcl": [],
@@ -22,10 +34,63 @@
           "type": "http"
         }
       ],
-      "allow": ["admin"],
+      "allow": ["smis"],
       "type": "http"
     }
   ],
+  "configDefs": [
+    {
+      "param": "smis",
+      "displayName": "SMIS",
+      "description": "SMIS basically requests KPI values from DHIS2",
+      "type": "struct",
+      "template": [{
+          "type": "string",
+          "description": "SMIS URL",
+          "displayName": "SMIS URL",
+          "param": "url"
+        },
+        {
+          "type": "string",
+          "description": "SMIS username",
+          "displayName": "Username",
+          "param": "username"
+        },
+        {
+          "type": "password",
+          "description": "SMIS Password",
+          "displayName": "Password",
+          "param": "password"
+        }
+      ],
+      "values": []
+    },
+    {
+      "param": "dhis2",
+      "displayName": "DHIS2",
+      "description": "DHIS2 Server",
+      "type": "struct",
+      "template": [{
+          "type": "string",
+          "description": "DHIS2 URL",
+          "displayName": "DHIS2 URL",
+          "param": "url"
+        },
+        {
+          "type": "string",
+          "description": "DHIS2 Username",
+          "displayName": "DHIS2 Username",
+          "param": "username"
+        },
+        {
+          "type": "password",
+          "description": "DHIS2 Password",
+          "displayName": "DHIS2 Password",
+          "param": "password"
+        }
+      ],
+      "values": []
+    }],
   "endpoints": [
     {
       "name": "SMIS and DHIS2 KPI data sync Route",
@@ -33,19 +98,9 @@
       "path": "/",
       "port": "7000",
       "primary": true,
+      "forwardAuthHeader": false,
+      "status": "enabled",
       "type": "http"
     }
-  ],
-  "configDefs": [
-    {
-      "param": "upstreamUrl",
-      "displayName": "Upstream URL",
-      "description": "The URL of the service upstream of the mediator",
-      "type": "string",
-      "template": []
-    }
-  ],
-  "config": {
-    "upstreamUrl": "http://sampleApplication:7001"
-  }
+  ]
 }
