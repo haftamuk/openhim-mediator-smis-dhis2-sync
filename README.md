@@ -15,7 +15,6 @@ Once results are returned, the mediator performs certain actions on the retrieve
 SUM - Sum of all returned row values
 AVERAGE  - Average of all returned row values
 LAST  - Last element of the returned rows
-MIDDLE  - Middle element of the returned rows
 FIRST  - First element of the returned rows
 
 SMIS should pass those flags in the request as parameters
