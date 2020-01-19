@@ -21,6 +21,7 @@
     "Name Surname &lt;email@exchange.com&gt; (https://github.com/githubusername)"
   ],
   "dependencies": {
+    "csv": "^5.3.1",
     "express": "^4.17.1",
     "openhim-mediator-utils": "^0.2.3",
     "request": "^2.71.0",
