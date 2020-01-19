@@ -11,11 +11,11 @@ https://play.dhis2.org/2.30/api/analytics?dimension=dx:${req.params.dx}&dimensio
 
 With three dynamic values you can pass to filter data elements.  
 
-Once results are returned, the mediator performs certain actions on the retrieved data based on your needs.
--SUM - Sum of all returned row values
--AVERAGE  - Average of all returned row values
--LAST  - Last element of the returned rows
--FIRST  - First element of the returned rows
+Once results are returned, the mediator performs certain actions on the retrieved data based on your needs.  
+- SUM - Sum of all returned row values
+- AVERAGE  - Average of all returned row values
+- LAST  - Last element of the returned rows
+- FIRST  - First element of the returned rows
 
 SMIS should pass those flags in the request as parameters 
 
