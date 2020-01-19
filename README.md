@@ -7,7 +7,7 @@ explore https://docs.dhis2.org/2.28/en/developer/html/webapi_analytics.html for 
 
    The DHIS2 API has many filtering options and parameters you can utilize to perform analytics, but this mediator uses only the required parameters(dimension parameter). Therefore requests to DHIS2 are sent in the following way  
 
-https://play.dhis2.org/2.30/api/analytics?dimension=dx:${req.params.dx}&dimension=pe:${req.params.pe}&dimension=ou:${req.params.ou}  
+https://play.dhis2.org/2.30/api/analytics?dimension=dx: **${req.params.dx}** &dimension=pe: **${req.params.pe}**  &dimension=ou: **${req.params.ou}**  
 
 With three dynamic values you can pass to filter data elements.  
 
