@@ -20,10 +20,10 @@ Once results are returned, the mediator performs certain actions on the retrieve
 SMIS should pass those flags in the request as parameters 
 
    The client also needs to pass other parameters:  
-SMIS KPI id, SMIS work unit id and period/range. ..
+SMIS KPI id, SMIS work unit id and period/range.  
    The mediator uses a key-value pairs to map SMIS KPI id with DHIS2 KPI id and a csv file to map SMIS work unit id with DHIS2 Work Unit Id/s.
 
-   The key-value file is simple plain text file with the first column containing SMIS KPI id and the second column containing DHIS2 KPI id
+   The key-value file is simple plain space separated text file with the first column containing SMIS KPI id and the second column containing DHIS2 KPI id
 
 ```
 SMIS-KPI-ID1 DHIS2-KPI-ID1
