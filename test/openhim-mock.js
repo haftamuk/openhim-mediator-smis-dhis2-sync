@@ -1,7 +1,6 @@
 'use strict'
 
 const https = require('https')
-const URL = require('url')
 const winston = require('winston')
 const fs = require('fs')
 
@@ -21,7 +20,7 @@ const server = https.createServer(options, function (req, res) {
   req.on('end', function () {
     winston.info(`Received ${req.method} request to ${req.url}`)
     winston.info(`with body: ${body}`)
-    let url = URL.parse(req.url)
+    const url = new URL(req.url)
     if (url.path === '/mediators') {
       res.writeHead(201)
       res.end(JSON.stringify({ response: 'Ok' }))
@@ -43,8 +42,8 @@ const server = https.createServer(options, function (req, res) {
 })
 
 function start (callback) {
-  server.listen(8080, function () {
-    winston.info('OpenHIM Server listening on 8080...')
+  server.listen(8011, function () {
+    winston.info('OpenHIM Server listening on 8011...')
     callback()
   })
 }
@@ -57,5 +56,5 @@ exports.stop = stop
 
 if (!module.parent) {
   // if this script is run directly, start the server
-  start(() => winston.info('OpenHIM Server listening on 8080...'))
+  start(() => winston.info('OpenHIM Server listening on 8011...'))
 }

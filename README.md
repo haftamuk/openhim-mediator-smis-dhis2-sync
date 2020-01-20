@@ -26,16 +26,19 @@ SMIS KPI id, SMIS work unit id and period/range.
    The key-value file is simple plain space separated text file with the first column containing SMIS KPI id and the second column containing DHIS2 KPI id
 
 ```
-SMIS-KPI-ID1 DHIS2-KPI-ID1
-SMIS-KPI-ID2 DHIS2-KPI-ID2
-SMIS-KPI-ID3 DHIS2-KPI-ID3
+SMISId,DHIS2Id
+SMIS-KPI-ID1,DHIS2-KPI-ID1
+SMIS-KPI-ID2,DHIS2-KPI-ID2
+SMIS-KPI-ID3,DHIS2-KPI-ID3
 ...
 
 ```
    The CSV file is also simple plain text file with the first column of SMIS work unit id and followed by one or more comma separated list of DHIS2 orgUnit ids
 ```
-SMIS-workunit-id1, DHIS2OrgUnitId11,DHIS2OrgUnitId12,DHIS2OrgUnitId13,DHIS2OrgUnitId14
-SMIS-workunit-id2, DHIS2OrgUnitId21,DHIS2OrgUnitId22
+SMISId,DHIS2Id
+SMIS-workunit-id1,DHIS2OrgUnitId11;DHIS2OrgUnitId12;DHIS2OrgUnitId13;DHIS2OrgUnitId14
+SMIS-workunit-id2,DHIS2OrgUnitId21;DHIS2OrgUnitId22
+SMIS-workunit-id3,DHIS2OrgUnitId31
 ...
 
 ```
