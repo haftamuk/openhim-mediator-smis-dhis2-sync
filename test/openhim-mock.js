@@ -43,7 +43,7 @@ const server = https.createServer(options, function (req, res) {
 
 function start (callback) {
   server.listen(8011, function () {
-    winston.info('OpenHIM Server listening on 8011...')
+    //    winston.info('OpenHIM Server listening on 8011...')
     callback()
   })
 }
@@ -56,5 +56,5 @@ exports.stop = stop
 
 if (!module.parent) {
   // if this script is run directly, start the server
-  start(() => winston.info('OpenHIM Server listening on 8011...'))
+  start()
 }

@@ -7,7 +7,7 @@
     "dhis2": {
       "password": "district",
       "username": "admin",
-      "url": "https://play.dhis2.org/"
+      "url": "https://play.dhis2.org/2.30/api/analytics"
     },
     "smis": {
       "password": "",
