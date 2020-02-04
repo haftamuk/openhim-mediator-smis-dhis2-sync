@@ -9,7 +9,12 @@
       "username": "admin",
       "url": "https://play.dhis2.org/2.30/api/analytics"
     },
-    "smis": {
+   "ethdhis2": {
+      "password": "",
+      "username": "",
+      "url": ""
+    },
+   "smis": {
       "password": "",
       "username": "",
       "url": "http://127.0.0.1:8000/"
@@ -90,7 +95,34 @@
         }
       ],
       "values": []
-    }],
+    },
+        {
+      "param": "ethdhis2",
+      "displayName": "ETH-DHIS2",
+      "description": "ETH-DHIS2 Server",
+      "type": "struct",
+      "template": [{
+          "type": "string",
+          "description": "ETH-DHIS2 URL",
+          "displayName": "ETH-DHIS2 URL",
+          "param": "url"
+        },
+        {
+          "type": "string",
+          "description": "ETH-DHIS2 Username",
+          "displayName": "ETH-DHIS2 Username",
+          "param": "username"
+        },
+        {
+          "type": "password",
+          "description": "ETH-DHIS2 Password",
+          "displayName": "ETH-DHIS2 Password",
+          "param": "password"
+        }
+      ],
+      "values": []
+    }
+  ],
   "endpoints": [
     {
       "name": "SMIS and DHIS2 KPI data sync Route",
