@@ -28,7 +28,7 @@
     "openhim-mediator-utils": "^0.2.3",
     "request": "^2.71.0",
     "requestretry": "^4.1.0",
-    "urijs": "^1.19.2",
+    "urijs": "^1.19.8",
     "xmldom": "^0.2.1",
     "xpath": "0.0.27"
   },
