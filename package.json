@@ -23,7 +23,7 @@
   "dependencies": {
     "csv": "^5.3.1",
     "csv-parser": "^2.3.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs": "0.0.1-security",
     "openhim-mediator-utils": "^0.2.3",
     "request": "^2.71.0",
