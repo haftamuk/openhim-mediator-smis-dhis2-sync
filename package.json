@@ -33,7 +33,7 @@
     "xpath": "0.0.27"
   },
   "devDependencies": {
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.2",
     "onchange": "^6.1.0",
     "rewire": "^4.0.1",
